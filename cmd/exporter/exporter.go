@@ -218,18 +218,6 @@ var metrics = []*Metric{
 		),
 		MetricType: prometheus.GaugeValue,
 	},
-	{
-		Service: "urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1",
-		Action:  "GetAddonInfos",
-		Result:  "ByteSendRate",
-		Desc: prometheus.NewDesc(
-			"gateway_wan_bytes_send_rate",
-			"byte send rate on gateway WAN interface",
-			[]string{"gateway"},
-			nil,
-		),
-		MetricType: prometheus.GaugeValue,
-	},
 }
 
 type FritzboxCollector struct {
